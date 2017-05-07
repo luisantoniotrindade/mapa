@@ -1,7 +1,9 @@
 package mapa;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileReader;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -24,7 +26,7 @@ public class Mapa {
 					  }
 				  }
 				  linha++;
-				  System.out.println("");
+				  //System.out.println("");
 			  }
 		} catch (FileNotFoundException e) {
 			// TODO Auto-generated catch block
@@ -32,6 +34,8 @@ public class Mapa {
 		}
 		  
 	}
+	
+	
 	
 	public void geraIlhas(){
 		for(int i = 0; i < coordenadas.size();i++){
@@ -41,7 +45,7 @@ public class Mapa {
 					Coordenada b = coordenadas.get(j);
 					if(a.EhVizinha(b)){
 						unica = false;
-						System.out.println(a.toString() + "pertence" + b.toString());
+						//System.out.println(a.toString() + "pertence" + b.toString());
 						if(a.isPertenceIlha() && !b.isPertenceIlha()){
 							b.setPertenceIlha(true);
 							b.setIlha(a.getIlha());
@@ -62,7 +66,7 @@ public class Mapa {
 							ilhas.add(ilha);
 						}
 					}else{
-						System.out.println(a.toString() + "não pertence" + b.toString());
+						//System.out.println(a.toString() + "não pertence" + b.toString());
 					}
 				
 			}
@@ -79,7 +83,12 @@ public class Mapa {
 
 	@Override
 	public String toString() {
-		return "[" +ilhas + "]";
+		//return "[" +ilhas + "]";
+		//Original: return "[" +ilhas + "]";
+		int totalIlhas = ilhas.size();
+		//String fim = "Total de Ilhas: " + totalIlhas;
+		String fim = Integer.toString(totalIlhas);
+		return fim;
 	}
 	
 	

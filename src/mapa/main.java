@@ -1,5 +1,7 @@
 package mapa;
 
+import java.io.Externalizable;
+
 public class main {
 
 	public static void main(String[] args) {
@@ -7,6 +9,10 @@ public class main {
 		m.lerArquivo();
 		m.geraIlhas();
 		System.out.println(m.toString());
+		
+		
+		
+		
 	}
 
 }
