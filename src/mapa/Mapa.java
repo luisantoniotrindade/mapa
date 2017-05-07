@@ -34,6 +34,45 @@ public class Mapa {
 		}
 		  
 	}
+	//
+	public void exibeMatriz(){
+		 File arquivo = new File("src/txt/example_0.txt");
+	     Scanner entrada = null;
+	     int coluna,linha;
+	try{
+	entrada = new Scanner(new BufferedReader( new FileReader(arquivo.getPath())));
+    coluna = entrada.nextInt();
+    linha = entrada.nextInt();
+    
+    
+   
+    System.out.println("Qt. de Colunas: "+coluna);
+
+    System.out.println("Qt. de Linhas: "+linha+"\n\n");
+
+    Integer[][] matriz = new Integer[coluna][linha];
+    
+    //Loop para o armazenamento da matriz
+    
+    //Enquanto tem linhas...
+    while(entrada.hasNext()==true){
+
+    	for(int lin = 0; lin < linha;lin++){
+    		//Quebrando a linha obtida em variáveis únicas para o armazenamento
+    		String[] linhasoriginais = entrada.next().split("");
+    		for(int col = 0; col < coluna; col++){matriz[col][lin] = Integer.parseInt(linhasoriginais[col]);}	
+    	}
+    }
+    	
+	}
+
+	catch ( java.io.IOException exc )
+		{
+			System.out.println("Erro: Não pode ler o arquivo");
+		}
+	}
+	
+	//
 	
 	
 	
