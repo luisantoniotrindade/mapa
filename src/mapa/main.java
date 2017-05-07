@@ -8,11 +8,14 @@ public class main {
 		Mapa m = new Mapa();
 		
 		String nomeDoArquivo = "example_1.txt";
+		/* Função extra para verificar a estrutura da matrix original
 		m.exibeMatriz(nomeDoArquivo);
+		*/
 		
-		//m.lerArquivo();
-		//m.geraIlhas();
-		//System.out.println(m.toString());
+		m.lerArquivo(nomeDoArquivo);
+		m.geraIlhas();
+		
+		System.out.println(m.toString());
 		
 		
 		

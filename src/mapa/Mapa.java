@@ -12,10 +12,11 @@ public class Mapa {
 	ArrayList<Ilha> ilhas = new ArrayList<>();
 	int linha = 0;
 	
-	public void lerArquivo() {
+	public void lerArquivo(String nomeDoArquivo) {
 		  Scanner sc;
 		try {
-			sc = new Scanner(new File("src/txt/mapa.txt"));
+			sc = new Scanner(new File("src/txt/" + nomeDoArquivo));
+			sc.nextLine();
 			while (sc.hasNext()) {
 				
 				String[] valores = sc.next().split("");
@@ -36,7 +37,7 @@ public class Mapa {
 	}
 	//
 	public void exibeMatriz(String nomeDoArquivo){
-		 File arquivo = new File("src/txt/example_1.txt");
+		 File arquivo = new File("src/txt/" + nomeDoArquivo);
 	     Scanner entrada = null;
 	     int coluna,linha;
 	try{
