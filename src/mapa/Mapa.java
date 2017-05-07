@@ -35,8 +35,8 @@ public class Mapa {
 		  
 	}
 	//
-	public void exibeMatriz(){
-		 File arquivo = new File("src/txt/example_0.txt");
+	public void exibeMatriz(String nomeDoArquivo){
+		 File arquivo = new File("src/txt/example_1.txt");
 	     Scanner entrada = null;
 	     int coluna,linha;
 	try{
@@ -62,6 +62,11 @@ public class Mapa {
     		String[] linhasoriginais = entrada.next().split("");
     		for(int col = 0; col < coluna; col++){matriz[col][lin] = Integer.parseInt(linhasoriginais[col]);}	
     	}
+    	System.out.println("Matriz Principal:\n");
+        for(int lin = 0; lin < linha;lin++){System.out.print("|");for(int col = 0; col < coluna; col++){
+    			System.out.print(matriz[col][lin].intValue());System.out.print("|");		
+    		}System.out.println();
+    	} 
     }
     	
 	}
